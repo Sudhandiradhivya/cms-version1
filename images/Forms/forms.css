@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --green: #68B984;
+    --red: #e74c3c;
+    --white: #fff;
+    --black: #222;
+}
+*{
+    font-family: 'poppins',sans-serif;
+}
+*::selection{
+    background-color: var(--green);
+    color: var(--black);
+}
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0; right: -105%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.register.active{
+    right: 0;
+}
+.form-container form{
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,.1);
+    width: 400px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border-radius: 5px;
+    margin: 10px;
+}
+.form-container form h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+.form-container form h3 a{
+    text-decoration: none;
+    color: var(--green);
+}
+.form-container form h3 .fa-hamburger:hover{
+    color: var(--red);
+}
+
+.form-container form input{
+    width: 93%;
+    margin: 5px 0;
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 8px 12px;
+    color: var(--black);
+    text-transform: none;
+}
+.form-container form input[type="submit"]{
+    display: inline-block;
+    padding: 9px 30px;
+    border: none;
+    border-radius: 5px;
+    background: var(--green);
+    font-size: 17px;
+    cursor: pointer;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.form-container form  input[type="submit"]:hover{
+    background: var(--black);
+}
+.form-container form input:focus{
+    outline: none;
+}
+.form-container form  p a{
+    color: var(--green);
+    font-size: 16px;
+}
+.form-container .form-control i.fa-check,i.fa-times{
+    visibility: hidden;
+    position: relative;
+    bottom: 35px;
+    left: 350px;
+}
+.form-control.success i.fa-check{
+    color: var(--green);
+    visibility: visible;
+}
+.form-control.error i.fa-times{
+    color: var(--red);
+    visibility: visible;
+}
+.form-control small{
+    text-align: center;
+    font-size: 14px;
+    color: var(--red);
+    position: relative;
+    right: 25px;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+
+.form-container #close-register-btn{
+    position: absolute;
+    top: 70px; right: 490px;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 22px;
+        }
+        body{
+            background-color: #353b48;
+        }
+        .box{
+            height: 8rem;
+            border: 5px solid white;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+            transform-origin: top;
+            
+        }
+        .box img:hover{
+            transform: scale(1.5);
+        }
+        .container{
+            max-width: 1200px;
+            margin:0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 1rem;
+        }
+        .control{
+            max-width: 1200px;
+            height: 100px;
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .control #Back{
+            width: 100px;
+            height: 30px;
+            text-decoration: none;
+        }
+        .btn{
+            margin-left: 20px;
+        }
+        .btn-group button{
+             width: 100px;
+             height: 30px;
+             border: none;
+             background-color:rgb(67, 112, 67);
+             color: white;
+             font-size: 0.8rem;
+             border: 2px solid rgb(67, 112, 67);
+             cursor: pointer;
+             transition:0.3s;
+             border-radius: 3px;
+        }
+        .btn-group button:hover,
+        .btn-group .btn-clicked
+        {
+            background-color: black;
+        }
+        #search{
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border: 2px solid  rgb(67, 112, 67);
+            padding: 0px 10px;
+            border-radius: 3px;
+            font-size: 0.6rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="control">
+        <div class="btn-group" >
+        <button class="btn btn-clicked"data-filter="all">All</button>
+        <button class="btn"data-filter="ghost">Ghost</button>
+        <button class="btn"data-filter="cullinan">Cullinan </button>
+        <button class="btn"data-filter="wraith"> Wraith</button>
+        <button class="btn"data-filter="phantom"> Phantom </button>
+        <button class="btn"data-filter="dawn"> Dawn </button>
+        </div>
+        <input type="text" placeholder="Search Car" id="search">
+        <button id="Back"><a href="aboutsection.html"> &laquo;BACK</a></button>
+    </div>
+    <div class="container">
+       <div class="box" data-item="ghost"><img src="images/g-1.jpg"></div>
+       <div class="box"data-item="cullinan"><img src="images/C-1.jpg"></div>
+       <div class="box"data-item="wraith"><img src="images/w-1.jpg"></div>
+       <div class="box"data-item="phantom"><img src="images/p-1.jpg"></div>
+       <div class="box"data-item="dawn"><img src="images/D-1.jpg"></div>
+
+
+
+
+       <div class="box" data-item="ghost"><img src="images/g-2.jpg"></div>
+       <div class="box"data-item="cullinan"><img src="images/C-2.jpg"></div>
+       <div class="box"data-item="wraith"><img src="images/w-2.jpg"></div>
+       <div class="box"data-item="phantom"><img src="images/p-2.jpg"></div>
+       <div class="box"data-item="dawn"><img src="images/D-2.jpg"></div>
+
+
+
+       <div class="box" data-item="ghost"><img src="images/g-3.jpg"></div>
+       <div class="box"data-item="cullinan"><img src="images/C-3.jpg"></div>
+       <div class="box"data-item="wraith"><img src="images/w-3.jpg"></div>
+       <div class="box"data-item="phantom"><img src="images/p-3.jpg"></div>
+       <div class="box"data-item="dawn"><img src="images/D-3.jpg"></div>
+
+
+
+       <div class="box" data-item="ghost"><img src="images/g-4.jpg"></div>
+       <div class="box"data-item="cullinan"><img src="images/C-4.jpg"></div>
+       <div class="box"data-item="wraith"><img src="images/w-4.jpg"></div>
+       <div class="box"data-item="phantom"><img src="images/p-4.jpg"></div>
+       <div class="box"data-item="dawn"><img src="images/D-4.jpg"></div>
+
+
+
+       <div class="box" data-item="ghost"><img src="images/g-5.jpg"></div>
+       <div class="box"data-item="cullinan"><img src="images/C-5.jpg"></div>
+       <div class="box"data-item="wraith"><img src="images/w-5.jpg"></div>
+       <div class="box"data-item="phantom"><img src="images/p-5.jpg"></div>
+       <div class="box"data-item="dawn"><img src="images/D-5.jpg"></div>
+    </div>
+    <script src="js/mainindex1.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+       
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+      }
+  body h3{
+   padding: 3%;
+   font-size: 40px;
+}
+      .swiper {
+        margin-top: 0%;
+        width: 60%;
+        height: 50%;
+        padding-left: 20%;
+        
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* border: 1px solid black; */
+      }
+      .content{
+        margin-top: 30px;
+        font-size: 20px;
+        margin-left: 80px;
+        margin-right: 80px;
+        color: rgb(87, 84, 84);
+        /* border: 1px solid black; */
+        background-color: white;
+        box-shadow: 0px -1px 31px -7px rgb(212, 203, 203);
+       transform: translateX(-2px);
+      }
+      </style>
+</head>
+<body>
+    <h3>Rolls-Royce Wraith</h3>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Swiper-->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/5.jpg"></div>
+          <div class="swiper-slide"><img src="images/6.jpg"></div>
+          <div class="swiper-slide"><img src="images/7.jpg"></div>
+          <div class="swiper-slide"><img src="images/8.jpg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div> 
+    <div class="content">
+        <p>
+            May 11, 2015: The philosophy of Rolls-Royce Motor Cars goes hand in hand with the high fashion industry. Celebrating this, the company has revealed its exclusive ‘Wraith - Inspired by Fashion' edition. This Wraith comes with exquisite and desirable materials enhancing the beauty of this already breathtaking car. Design inspiration comes from different colour palettes, materials and techniques familiar to the fashion industry. Two-tone exterior colour scheme of Andalucian White and Arctic White compliments the signature shoulder-line further accentuated by a new hand-applied feature-line in the selected highlight colour hinting towards the interior of the Wraith. Just like finest clothing, the beauty lines in the extreme attention to detail paid on this vehicle.
+        </p>
+    </div>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         spaceBetween: 30,
+         centeredSlides: true,
+         autoplay: {
+           delay: 2500,
+           disableOnInteraction: false,
+         },
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+       });
+     </script>
+</body>
+</html>
