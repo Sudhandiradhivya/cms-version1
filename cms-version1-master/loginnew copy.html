@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-image:url("images/slide5.webp"); */
+            position: relative;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container {
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: rgba(226, 246, 246, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgb(61, 75, 79);
+            overflow: hidden;
+            margin: 0 20px;
+        }
+
+        .container .forms {
+            display: flex;
+            align-items: center;
+            height: 440px;
+            width: 200%;
+            transition: height 0.2s ease;
+        }
+
+        .container .form {
+            width: 50%;
+            padding: 30px;
+            /* background: rgba(30,39,39,0.3); */
+            transition: margin-left 0.18s ease;
+        }
+
+        .container.active .login {
+            margin-left: -50%;
+            opacity: 0;
+            transition: margin-left 0.18s ease, opacity 0.15s ease;
+        }
+
+        .container .signup {
+            opacity: 0;
+            transition: opacity 0.09s ease;
+        }
+
+        .container.active .signup {
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+
+        .container.active .forms {
+            height: 600px;
+        }
+
+        .container .form .title {
+            position: relative;
+            font-size: 36px;
+            font-weight: 600;
+            /* color: #ccc;*/
+        }
+
+        .form .title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 30px;
+            background-color: #38acea;
+            border-radius: 25px;
+        }
+
+        .form .input-field {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .input-field small {
+            color: red;
+            position: relative;
+            top: 50px;
+            visibility: hidden;
+        }
+
+        .input-field .error small {
+            visibility: visible;
+        }
+
+        .input-field input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 0 35px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-bottom: 2px solid #ccc;
+            border-top: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .input-field input:is(:focus, :valid) {
+            border-bottom-color: #38acea;
+        }
+
+        .input-field i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 23px;
+            transition: all 0.2s ease;
+        }
+
+        .input-field input:is(:focus, :valid)~i {
+            color: #53bef7;
+        }
+
+        .input-field i.icon {
+            left: 0;
+        }
+
+        .input-field i.showHidePw {
+            right: 0;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .form .checkbox-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .checkbox-text .checkbox-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-content input {
+            margin-right: 10px;
+            accent-color: #53bef7;
+        }
+
+        .form .text {
+            color: rgb(14, 1, 1);
+            font-size: 14px;
+        }
+
+        .form a.text {
+            color: #53bef7;
+            text-decoration: none;
+        }
+.form a:hover {
+            text-decoration: underline;
+        }
+
+        .form .button {
+            margin-top: 35px;
+        }
+
+        .form .button input {
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background-color: #53bef7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button input:hover {
+            background-color: #53bef7;
+        }
+
+        .form .login-signup {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+                <form action="#" id="formcontainer" autocomplete="off">
+                    <div class="input-field">
+                        <input type="text" id="Loginemail" placeholder="Enter your email" onkeyup="validateLoginemail()"
+                            required>
+                        <i class="uil uil-envelope icon" id="correctEmail"></i>
+                        <p id="emailId"
+                            style="position:absolute; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="Loginpassword" id="password" placeholder="Enter your password"
+                            onkeyup="validatePass()" required>
+                        <i class="uil uil-lock icon" id="correctNew"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                        <p id="newPass"
+                            style="position:absolute; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Login" onclick="valLogin()">
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="#" class="text signup-link" >Signup Now</a>
+                    </span>
+                </div>
+            </div>
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" onkeyup="validateRegname()" id="validateName" required>
+                        <i class="uil uil-user" id="correctRegname"></i>
+                        <p id="regName"
+                            style="position:absolute; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Enter your email" id="validateEmail" onkeyup="validateRegemail()" required>
+                        <i class="uil uil-envelope icon" id="correctRegemail"></i>
+                        <p id="regEmail"
+                            style="position:absolutce; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter a new password" id="valNewpass" onkeyup="validateNewpass()" required>
+                        <i class="uil uil-lock icon" id="correctNewpass"></i>
+                        <i class="uicvl uil-eye-slash showHidePw"></i>
+
+                        <p id="newPassword"
+                            style="position:absolute; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Re-endster a password" onkeyup="validateConpass()" id="valConpass" required>
+                        <i class="uil uil-lock icon" id="correctConfirmpass" ></i>
+                        <!-- <i class="uicvl uil-eye-slash showHidePw"></i> -->
+                     <p id="conPassword"
+                            style="position:absolute; color:red; padding-left:5%; padding-top: 15%; font-size: 11px;">
+                        </p>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        </div>
+                    </div>
+                    <div class="input-field button" onclick="regValidate()">
+                        <input type="button" value="Signup">
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="#" class="text login-link">Login Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const container = document.querySelector(".container"),
+        pwShowHide = document.querySelectorAll(".showHidePw"),
+        pwFields = document.querySelectorAll(".password"),
+        signUp = document.querySelector(".signup-link"),
+        login = document.querySelector(".login-link");
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon => {
+        eyeIcon.addEventListener("click", () => {
+            pwFields.forEach(pwField => {
+                if (pwField.type === "password") {
+                    pwField.type = "text";
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                } else {
+                    pwField.type = "password";
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            })
+        })
+    })
+    // js code to appear signup and login form
+    signUp.addEventListener("click", () => {
+        container.classList.add("active");
+    });
+    login.addEventListener("click", () => {
+        container.classList.remove("active");
+    });
+    function validateLoginemail() {
+        var emailID = document.getElementById("Loginemail").value;
+        var errorEmail = document.getElementById("emailId");
+        var validateCorrect = document.getElementById("correctEmail");
+        var regexEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailID.match(regexEmail)) {
+            errorEmail.innerHTML = "Enter email in only dhivya@gmail.com this format...";
+            validateCorrect.style.color = "red";
+            return false;
+        }
+        errorEmail.innerHTML = "";
+        validateCorrect.style.color = "green";
+        return true;
+    }
+    function validatePass() {
+        var newPassword = document.getElementById("password").value;
+        var errorNewpass = document.getElementById("newPass");
+        var validateCorrect = document.getElementById("correctNew");
+        var regexNewpass = "^(.{0,6}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$";
+        if (newPassword.match(regexNewpass)) {
+            errorNewpass.innerHTML = "Create strong password..like(A-a-@-1)";
+            validateCorrect.style.color = "red";
+            return false;
+        }
+        errorNewpass.innerHTML = "";
+        validateCorrect.style.color = "green";
+        return true;
+    }
+    function valLogin() {
+        if (validateLoginemail() && validatePass()) {
+            alert('Register successful');
+            window.open("mainindex.html");
+            return true;
+        }
+        else {
+            alert('Enter valid details');
+
+        }
+    }
+
+// js code to appear signup or register form
+function validateRegname() {
+            var fName = document.getElementById("validateName").value;
+            var errorFirstname = document.getElementById("regName");
+            var validateCorrect = document.getElementById("correctRegname");
+            var regexFirstname = /^[A-Za-z]+$/;
+            if (!fName.match(regexFirstname)) {
+                errorFirstname.innerHTML = "Enter the  Username only alphabets";
+                validateCorrect.style.color = "red";
+                return false;
+            }
+            errorFirstname.innerHTML = "";
+            validateCorrect.style.color = "green";
+            return true;
+        }
+        function validateRegemail() {
+        var emailID = document.getElementById("validateEmail").value;
+        var errorEmail = document.getElementById("regEmail");
+        var validateCorrect = document.getElementById("correctRegemail");
+        var regexEmail = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+        // "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+        ///^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailID.match(regexEmail)) {
+            errorEmail.innerHTML = "Enter email in only dinesh@gmail.com this format...";
+            validateCorrect.style.color = "red";
+            return false;
+        }
+        errorEmail.innerHTML = "";
+        validateCorrect.style.color = "green";
+        return true;
+    }
+    function validateNewpass() {
+            var newPassword = document.getElementById("valNewpass").value;
+            var errorNewpass = document.getElementById("newPassword");
+            var validateCorrect = document.getElementById("correctNewpass");
+            var regexNewpass = "^(.{0,6}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$";
+            if (newPassword.match(regexNewpass)) {
+                errorNewpass.innerHTML = "Create strong password..like(A-a-@-1)";
+                validateCorrect.style.color = "red";
+                return false;
+            }
+            errorNewpass.innerHTML = "";
+            validateCorrect.style.color = "green";
+            return true;
+        }
+        function validateConpass() {
+            var newPassword = document.getElementById("valNewpass").value;
+            var confirm = document.getElementById("valConpass").value;
+            var validateCorrect = document.getElementById("correctConfirmpass");
+            var errorConpass = document.getElementById("conPassword");
+            if (newPassword != confirm) {
+                errorConpass.innerHTML = "Password not matched";
+                validateCorrect.style.color = "red";
+                return false;
+            }
+            errorConpass.innerHTML = "";
+            validateCorrect.style.color = "green";
+            return true;
+        }
+        function regValidate() {
+            if (validateRegname() && validateRegemail() && validateNewpass() && validateConpass()) {
+                alert('Register successful');
+                window.open("loginnew copy.html");
+                return true;
+            }
+            else {
+                alert('Enter valid details');
+                location.href="loginnew copy.html";
+
+                // window.("loginnew copy.html");
+            }
+        }
+</script>
+</html>

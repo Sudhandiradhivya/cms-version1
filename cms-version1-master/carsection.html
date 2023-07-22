@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .swiper {
+        width: 100%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button{
+    width: 15%;
+    height: 50px;
+   margin-top: 70px;
+   margin-bottom: 30px;
+   border-radius: 2px;
+   border: none;
+   
+   box-shadow: -1px -1px 14px 2px rgba(129, 123, 123, 0.75);
+   background:transparent;
+   border-radius: 30px;
+   cursor: pointer;
+   color: white;
+   font-size: 16px;
+}
+.butt1{
+    margin-left:70px;
+    
+}
+      .heading{
+        margin-left: 40%;
+        font-size: 35px;
+        font-weight: 600;
+        font-family:sans-serif;
+      }
+       h2{
+        margin-left: 41%;
+      }
+      .carsection .car-container{
+        display: flex;
+       
+      }
+       .box1,.box{
+        padding: 30px;
+      }
+      .box,.box1{
+        padding: 2%;
+        /* border:2px solid rgb(173, 164, 164); */
+       margin: 2%;
+       border-radius: 5px;
+       background-color: #fff;
+      width: 100%;
+      height: 100%;
+      }
+      .box a,.box1 a{
+        position:absolute;
+        color:rgb(11, 134, 85);
+        font-size: 20px;
+      }
+      .box h3 {
+        font-size: 20px;
+      }
+      .box1 h3{
+        font-size: 18.5px;
+      }
+      .box span, .box1 span{
+        font-size: 20px;
+      }
+      /* .box .fa-heart, .box1 .fa-heart{
+        color: red;
+        margin-left: -2px;
+      } */
+      .box .stars, .box1 .stars{
+        line-height: 5px;
+        margin-top: 2px;
+        color: orange;
+      }
+      .box .btn, .box1 .btn{
+        text-decoration: none;
+        background: blue;
+        color: white;
+        padding:1px 10px;
+        padding-bottom: 3px;
+        border-radius: 4px;
+      }
+      .box .btn:hover, .box1 .btn:hover{
+       background-color: rgb(223, 40, 230);
+      }
+      .box:hover, .box1:hover{
+        box-shadow: 0px -1px 31px -7px rgb(29, 2, 2);
+       transform: translateX(-2px);
+      }
+    </style>
+  </head>
+
+  <body>
+   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Swiper-->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/slide1.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide2.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide3.jpg"></div>
+          <div class="swiper-slide"><img src="images/slide5.webp"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div> 
+    <!---Swiper ends-->
+
+    <!--Car Section-->
+    <section class="carsection">
+          <h3 class="heading">Explore Further </h3>
+            <h2>Continue your journey</h2> 
+          <div class="car-container">
+          <div class="box">
+            <img src="images/img1.jpg" width="100%" height="180px" >
+            <h3>R R Ghost</h3>
+           <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>$5.20 cr</span><br>
+            <a href="http://127.0.0.1:5500/cms-version1-master/product.html" class="btn">View details</a>
+        </div>
+   
+        <div class="box1">
+            <img src="images/img2.jpg" width="100%" height="180px">
+            <h3>R R cullinan</h3>
+           <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>$6.95Cr</span><br>
+            <a href="http://127.0.0.1:5500/cms-version1-master/cullian.html" class="btn">View details</a>
+        </div>
+        <div class="box">
+            <img src="images/img3.jpg" width="100%" height="180px" >
+           
+            <h3>R R wraith</h3>
+           <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>$5.50Cr</span><br>
+            <a href="http://127.0.0.1:5500/cms-version1-master/wraith.html" class="btn">View details</a>     
+           </div>
+        <div class="box1">
+            
+           
+            <img src="images/img4.jpg" width="100%" height="180px">
+            <h3>R R phantom</h3>
+           <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+
+            <span>$9.50Cr</span><br>
+
+            <a href="http://127.0.0.1:5500/cms-version1-master/phantom.html" class="btn">View details</a>
+        </div>
+        <div class="box">
+            <img src="images/img5.jpg" width="100%" height="180px">
+            <h3>R R Dawn</h3>
+           <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>$5.92Cr</span><br>
+            <a href="dawn.html" class="btn">View details</a>
+        </div>
+        </div>
+    </section>
+    <div class="butt1">
+        
+      <button><a href="mainindex.html"><i id="icon"class="uil uil-arrow-left"></i> &nbsp;Back</a></button>
+  </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

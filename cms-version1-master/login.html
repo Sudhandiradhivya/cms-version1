@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML | CodingNepal</title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+         </div>
+         <div class="form-container">
+            <!-----------------------------------------------------------slider------------------------------------------------>
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <!---------------------------------------------------Login Form validation starts------------------------------------------------->
+            <div class="form-inner">
+               <form action="#"class="login" onsubmit="return vfun()">
+                  <div class="field">
+                     <input type="email" onkeyup="loginUserValidate()" id="Username"  placeholder="Email Address" required>
+                     <p id="useremail" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field">
+                     <input type="password" onkeyup="loginPassValidate()" id="psw1" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Password" required>
+                     <p id="userpass" style="color: red; padding-left:2%"></p>
+                  </div><br><br>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer">
+                     <input type="submit" value="Login">
+                  </div>
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+                  <span class="loginlogoutlink">
+                     <a title="Log Out" class="loginlogoutlink-logout" href="mainindex.html">Log Out</a>
+                  </span>
+               </form>
+               <!----------------------------------------------------Login form endsss---------------------------------------------------------------->
+               <form action="#"  class="signup" id="form">
+                  <div class="field">
+                     <input type="text" maxlength="16" placeholder="Enter username" id="username" onkeyup="validateUsername()" required>
+                     <p id="user" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field">
+                     <input type="email" placeholder="Email Address" id="email" required>
+                     <!-- <i class="ion-ios-checkmark"></i>
+                    <i class="ion-android-alert"></i> -->
+                    <p id="email_id" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field">
+                     <input type="password" onkeyup="validatePassword()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  placeholder="Password" id="psw" required>
+                     <!-- <i class="ion-ios-checkmark"></i>
+                     <i class="ion-android-alert"></i> -->
+                     <p id="newPass" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" id="confirmpassword" onkeyup="validateConpass()" required>
+                     <!-- <i class="ion-ios-checkmark"></i>
+                     <i class="ion-android-alert"></i> -->
+                     <p id="conpass" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field">
+                     <input type="text" maxlength="10" placeholder="Enter phonenumber" id="phonenumber" onkeyup="validatePhone()" required>
+                     <!-- <i class="ion-ios-checkmark"></i>
+                     <i class="ion-android-alert"></i> -->
+                     <p id="phoneNo" style="color: red; padding-left:2%"></p>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer">
+                     <input type="submit" onclick="validateSignup()" value="Signup"></div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         
+      </div>
+      <div id="message">
+         <h3>Password must contain the following:</h3>
+         <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+         <p id="number" class="invalid">A <b>number</b></p>
+         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+       </div>
+      <script src="js/mainindex.js"></script>
+      
+   </body>
+</html>

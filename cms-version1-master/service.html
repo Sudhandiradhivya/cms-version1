@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Service section</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color:#fe5b3d;
+    --second-color:#ffac38;
+    --text-color:black;
+    --gradient:linear-gradient(#fe5b3d,#ffac38);/*gradient color*/
+}
+body{
+   background-color: black;
+}
+.heading{
+    top: 0;
+    margin: 30px;
+    text-align: center;
+    font-size: 3rem;
+    color:white;
+    font-weight: bold;
+   
+  
+}
+        .service .box-container{
+            margin-top: 20px; 
+            display: grid;
+            /* grid-template-columns: repeat(auto-fit,minmax(30rem,1fr)); */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+            width: 20px;
+            margin-left: 190px;
+            background: black;
+        }
+        .service .box-container .box{
+            /* box-shadow:var(--gradient) ; */
+            text-align: center;
+            margin: 30px 20px;
+            border-radius: .5rem;
+            border: .2rem solid rgba(0,0,0,.1);
+            padding: 20px ;
+           
+        } 
+        .service .box-container .box i{
+                margin-top: 5px;
+                size: 5rem;
+               line-height: 4rem;
+               font-size: 5rem;
+               color: rgb(24, 154, 163);
+               /* background:var(--gradient); */
+               border-radius: 100%;
+               margin-bottom: 1rem;
+        }
+        .service .box-container .box h3{
+            line-height: 1rem;
+            font-size: 25px;
+            color: white;
+        }
+        .service .box-container .box p{
+            line-height: 1rem;
+            font-size: 17px;
+            padding:1rem 3rem;
+            color: white;
+        }
+    
+        .service .box-container .box:hover{
+            box-shadow: 0px -1px 31px -7px rgb(251, 251, 251);
+            transform: translateX(-2px);
+        }
+        /* .service .box-container .box:hover h3{
+            color: #fff;
+        }
+        .service .box-container .box:hover p{
+            color: #eee;
+        } */
+        
+        .btn{
+            /* background:-webkit-gradient(right,(black,gold) ); */
+            padding: 4px 4px;
+            border-radius: .5rem;
+            line-height: 1rem;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <section class="service" id="services">
+        <h1 class="heading">our <span>services</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>car selling</h3>
+                <p>Sell your car at best price instantly from home.
+                </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-tools"></i>
+                <h3>parts repair</h3>
+                <p>If your car damage due to any circumstances we repair your car.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-car-crash"></i>
+                <h3>car insurance</h3>
+                <p>Insurance provides compensation to the policyholder in the event their car. </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-battery"></i>
+                <h3>battery repalcement</h3>
+                <p>A suitable batteries are available with affordable price.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-gas-pump"></i>
+                <h3>oil change</h3>
+                <p>You want to change oil we can...</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 supports</h3>
+                <p>Always we give a suppors everytime and anywhere.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+<!-- <script src="main.js"></script> -->
+    </section>
+</body>
+</html>

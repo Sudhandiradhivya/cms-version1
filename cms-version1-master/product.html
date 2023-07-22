@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product filter</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons."></script>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* background-color: black; */
+    }
+    h2{
+      text-align: center;
+      font-size: 50px;
+      /* background-color: aqua; */
+    }
+    /* .main-image{
+       width: 500px;
+       height: 200px;
+    } */
+    .video{ 
+     height: 850px;
+      list-style-type: none;
+      
+    }
+     /* .whole{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: inline;
+        
+    } */
+   .image{
+    position: relative;
+    text-align: center;
+    
+    /* color:#fff; */
+   }
+   
+  .intro {
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    color:black;
+    font-size: 50px;
+    background-color: transparent;
+   }
+   .intro h6{
+    background-color: transparent;
+   }
+   .headline button{
+      height: 50px;
+      width: 20%;
+      
+      padding-left: 30px;
+      margin-top: 10%;
+      margin-left: 70px;
+      font-size: 14px;
+      font-weight:600;
+      border: 2px solid black;
+      border-color: rgb(4, 73, 81);
+      background-color:white;
+      cursor: pointer;
+      border-radius: 2rem;
+
+     
+    }
+    .headline a{
+      color: black;
+      text-decoration: none;
+    }
+   
+    .headline button:hover{
+        background-color: rgb(8, 114, 156);
+        border: none;
+    }
+    .headline .btn6{
+      margin-left: -30%;
+    }
+    .headline .btn5{
+      margin-right: -30%;
+    }
+   
+   /* .but1{
+    color:white;
+    padding-top: 20px;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 20px;
+    margin: 40px;
+    border-radius: 5rem;
+    background-color:rgb(219, 119, 244);
+    font-size: 30px;
+    font-style: italic;
+    top: 40%;
+    border-radius: none ;
+    border: none;
+    cursor: pointer;
+   } */
+   
+      .container{
+        /* padding: 10px;
+        margin-top: 100%;
+        width: 1000px;
+        height: 500px; */
+       display: flex;
+        margin-top: 5%;
+        margin-left: 15%;
+        background-color:black;
+        display: flex;
+       padding: 10px;
+       position:absolute;
+      /* background-image: url(images/img-4.webp); */
+    }
+       img{
+         /* width: 560px; */
+         width: 100%;
+        /* height: 280px;  */
+        display:block;
+        transition: all 0.8s ease;
+    }   
+    
+    .card-left{
+        width:420px;
+       overflow: hidden;
+      
+    }
+      .main-image{
+        display: flex;
+        transition: all 0.5s ease;
+    }   
+      .img-select img{
+        /* margin: 20px; */
+        width: 105px;
+        height: 180px;
+        padding-top: 20px;
+    }  
+    .img-select{
+         margin-top: 10px;
+          display: flex;
+
+    }   
+    .card-right{
+      padding-left: 50px;
+    }
+    .card-right h3{
+          font-size: 40px;
+          font-family:'poppins', sans-serif;
+          color:#fff;
+    } 
+    .stars{
+      color: orange;
+      font-size:30px;
+      margin-top: 20px;
+    }
+    .form h1{
+      padding-top: 10px;
+      font-size: 28px;
+      color: aquamarine;
+    }
+    span{
+      font-size: 25px;
+      color: #fff;
+      padding: 2px;
+    }
+    p{
+      font-size: 20px;
+      padding-top: 5px;
+      color:white;
+    }
+    b{
+      color:white;
+      padding: 2px;
+    }
+   .heading h1{
+   margin-left: 30%;
+   margin-top: 5%;
+   color: black;
+   font-size: 50px;
+   }
+   .heading h2{
+    font-size: 20px;
+    color: black;
+    margin-left: 10px;
+   }
+   .down img{
+          margin-top: 45%;
+          width: 30%;
+          height: 40%;
+          margin-left: 40px;
+          box-sizing: border-box;
+          border-radius: 10px 4px;
+   }
+   /* body{
+      width: 100vw;
+      height: 100vh;
+      background-color:#efeff0;
+      display: flex;
+      /* justify-content: center;
+      align-items: center;} */
+    .groups{
+      margin-top: 650px;
+      display: flex;
+      background-color:#efeff0;
+    }
+    .box-top img{
+     height: 500px;
+     cursor: pointer;
+    }
+    .containers{
+      top: 30%;
+      width: 500px;
+      height: 700px;
+      background-color:white;
+      padding: 10px;
+      /* display: flex; */
+    }
+    .containers::after{
+      content: "";
+      position: absolute;
+      background: rgb(210, 189, 189);
+      width: 1px;
+      height: 167px;
+      top: 432%;
+      transform: translateY(130%);
+    }
+    
+    .box-top img{
+      width: 100%;
+      /* display: block; */
+      opacity: 0.5;
+    }
+    .box-top img:hover{
+      opacity:1;
+      transition: 0.5s;
+    }
+    .box-bottom h1{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-left: 5px;
+         color:black;
+         font-size: 20px;
+    }
+    .box-bottom p{
+          line-height: 1.5;  
+          margin-left: 5px; 
+          font-size: none;
+          color: black;
+    }
+</style>
+
+</head>
+<body>
+  <h2>GHOST</h2>
+  <div class="video">
+    <video src="images/v1.mp4" autoplay loop muted width="100%" ></video>
+  </div>
+          
+     
+      <div class="image">
+        <img src="images/31.jpg">
+        <div class="intro">
+          A MAVERICK SPIRIT.<br><br>
+           <h6>EXPRESSIVELY BOLD.<br><br></h6>
+           EXQUISITELY CRAFTED
+        </div>
+      <div class="headline">
+        <button class="btn6"><a href="carsection.html"> &laquo;BACK</a></button>
+        <button class="btn5"><a href="http://127.0.0.1:5500/cms-version1-master/loginnew%20copy.html">FIND YOUR DISCOVER &raquo;</a></button>
+      </div>
+      </div>
+           
+      <div class="scroll">
+        <div class="heading">
+          <h1>CONTINUE YOUR JOURNEY<br></h1>
+            <h2>Delve further into stories of Inspiring Greatness.</h2>
+        </div>
+      </div>
+  <div class="group">
+    <div class="container">
+        <div class="card-left">
+           <div class="main-image">
+                    <img src="images/phn1.jpg" ><br>
+                    <img src="images/phn2.jpg"><br>
+                    <img src="images/phn3.jpg" ><br>
+                    <img src="images/phn4.jpg">
+           </div>
+           <div class="img-select">
+              <div class="img">
+                <a href="#" data-id="1"><img src="images/phn1.jpg"></a>
+              </div>
+              <div class="img">
+                <a href="#"data-id="2"><img src="images/phn2.jpg"></a>
+              </div>
+              <div class="img">
+                <a href="#"data-id="3"><img src="images/phn3.jpg"></a>
+              </div>
+              <div class="img">
+                <a href="#"data-id="4"><img src="images/phn4.jpg"></a>
+              </div>
+           </div>
+        </div>
+        <div class="card-right">
+          <h3>Rolls-Royce Ghost</h3>
+          <div class="stars">
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-half-outline"></ion-icon>
+          </div>
+         <span>$6.95-7.95 Crore</span>
+         <div class="form-group">
+           <div class="form">
+            <h1>Ghost Specs, Features and Price</h1>
+              <p>
+                The <b>Rolls-Royce Ghost</b> has 1 petrol Engine <br>on offer.The Petrol engine is 6750 cc .<br>
+                It is available with Automatic transmission.<br>Depending upon the variant and fuel type
+                the Ghost has a<br> mileage of 6.33 kmpl . The Ghost is a 5 seater 12 cylinder car .<br>
+             </p>   
+             
+
+        </div>
+      </div>
+        </div>
+    </div>
+  </div>
+  
+  </div>
+  <!-- <div class="headline">
+    <h3>CONTINUE YOUR JOURNEY</h3>
+    <p>Delve further into stories of Inspiring Greatness.</p>
+    <button class="btn5"><a href="carsection.html">&laquo; BACK</a></button>
+    <button class="btn6"><a href="">FIND YOUR DISCOVER &raquo;</a></button>
+  </div> -->
+<!----------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="groups">
+<div class="containers">
+  <div class="box-top">
+      <img src="images/dow.jpg">
+  </div> 
+<div class="box-bottom">
+    <h1>GHOST</h1>
+    <P>Making its debut in 2020, Ghost is a motor can for those who recognise beaty in restraint.
+      Discover the purest expression of Rolls-Royce now.
+    </P>
+</div>
+</div>
+<div class="containers">
+<div class="box-top">
+    <img src="images/down2.webp" id="image">
+</div> 
+<div class="box-bottom">
+  <h1>THE NEW  GHOST EXTENDED</h1>
+  <P>Making its debut in 2020,the new Ghost Extended is a motor Ghost Extended is a motor car for those seeking 
+    clarity. Within the serence realm of its cabin, time and space are yours alone.
+  </P>
+</div>
+</div>
+<div class="containers">
+<div class="box-top">
+    <img src="images/down3.jpg" >
+</div> 
+<div class="box-bottom">
+  <h1>DISCOVER BESPOKE</h1>
+  <P>Choose from our exclisive collections or collaborate with our craftspeople and designers
+    to create a Rolls-Royce wholly unique to you. This is Rolls-Royce Bespoke.
+  </P>
+</div>
+</div>
+
+</div>
+</body>
+<script>
+ 
+</script>
+<script src="js/product.js"></script>
+</html>

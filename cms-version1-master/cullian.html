@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+
+  <style>
+     *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* background-color: black; */
+    }
+  
+    h2{
+      text-align: center;
+      font-size: 50px;
+      /* background-color: aqua; */
+    }
+    
+    .video{ 
+     height: 850px;
+      list-style-type: none;
+      /* display: block; */
+    }
+    .video h5{
+      display: inline-block;
+      position: absolute;
+      color: white;
+      margin-top: 80px;
+      margin-left: 30%;
+      /* font-weight: 100; */
+      font-size: 90px;
+      
+      text-align: center;
+      color: rgb(226, 224, 220);
+    }
+    .heading h2{
+      padding: 20px;
+      font-weight: 100;
+      margin-top: 30px;
+    }
+    .heading p{
+      margin-left: 5%;
+      text-align: center;
+      padding: 20px;
+     line-height: 2;
+    }
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: absolute;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        /* display: block; */
+      }
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .middle h3{
+      padding: 70px;
+      font-weight: 500;
+      font-size: 40px;
+      margin-top: 500px;
+      margin-left: 30%;
+      }
+     .middle p{
+      margin-left: 5%;
+      text-align: center;
+      padding: 15px;
+       line-height: 2;
+     }
+     .group{
+        background-color: #efeff0;
+        width: 100%;
+        height: 1800px;
+      }
+      .img1{
+        padding: 30px;
+        height: 270px;
+      }
+      .img2{
+        margin-left: 60%;
+      }
+      .img3{
+        margin-top: 5px;
+        
+      }
+
+
+
+      .groups{
+        margin-left: 30px;
+        margin-right: 30px;
+      margin-top: 160px;
+      display: flex;
+      background-color:#efeff0;
+    }
+    .box-top img{
+     height: 500px;
+     cursor: pointer;
+    }
+    .containers{
+      top: 30%;
+      width: 500px;
+      height: 700px;
+      background-color:white;
+      padding: 10px;
+      /* display: flex; */
+    }
+    .containers::after{
+      content: "";
+      position: absolute;
+      background: rgb(210, 189, 189);
+      width: 1px;
+      height: 167px;
+      top: 550%;
+      transform: translateY(130%);
+    }
+    
+    .box-top img{
+      width: 100%;
+      /* display: block; */
+      opacity: 0.5;
+    }
+    .box-top img:hover{
+      opacity:1;
+      transition: 0.5s;
+    }
+    .box-bottom h1{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-left: 5px;
+         color:black;
+         font-size: 25px;
+    }
+    .box-bottom p{
+          line-height: 1.5;  
+          margin-left: 5px; 
+          font-size: none;
+          color: black;
+    }
+    .headline h3{
+            padding: 30px;
+            font-size: 30px;
+            margin-left: 30%;
+            margin-top: 40px;
+    }
+    .headline p{
+      margin-left: 5px;
+      text-align: center;
+
+    }
+    .headline a{
+      text-decoration:none;
+    }
+    button{
+      height: 50px;
+      width: 20%;
+      margin-left: 270px;
+      margin-top: 70px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      background-color:rgb(123, 119, 119);
+      border-radius: 2rem;
+      cursor: pointer;
+    }
+    .btn1{
+      background-color: blueviolet;
+    }
+    button:hover{
+        background-color: rgb(247, 161, 130);
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h2>CULLINAN</h2> -->
+  <div class="video">
+    <h5>CULLINAN</h5>
+    <video src="images/v3.mp4" autoplay loop muted width="100%" ></video>
+  </div>
+  <div class="heading">
+    <h2>LUXURY FOR ALL</h2>
+    <p>Share unforgettable adventures in the company of friends
+      With its spacious interior, Cullinan <br>accomodates every traveller in unparalled comfort.
+    </p>
+  </div>
+   <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/cunew1.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/cunew2.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/cunew3.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/cunew4.webp" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/cunew5.webp" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="group">
+    <div class="middle">
+           <h3>UNCHARTED IN COMFORT</h3>
+           <p>Discover new horizons with ease. Venture beyond your comfort zone - in uncompromised comfort. <br>Within Cullinan’s palatial Suite,
+             you are cosseted from the elements in pure luxury.</p>
+    </div>
+    <div class="imagegroup">
+                  <div class="img1">
+                    <img src="images/cunew6.webp" width="40%" height="550px">
+                  </div>
+                  <div class="img2">
+                    <img src="images/cunew7.jpg" width="90%" height="650px">
+                   </div>
+                  <div class="img3">
+                   <img src="images/cunew8.jpg" width="40%" height="450px">
+                  </div>
+    </div>
+  </div>
+
+
+
+<!---------------------------------------------------bottom-------------------------------------------------->
+<div class="headline">
+  <h3>CONTINUE YOUR JOURNEY</h3>
+  <p>Delve further into stories of Inspiring Greatness.</p>
+  <button ><a href="carsection.html">&laquo; BACK</a></button>
+  <button class="btn1"><a href="http://127.0.0.1:5500/cms-version1-master/loginnew%20copy.html">FIND YOUR DISCOVER &raquo;</a></button>
+</div>
+<div class="groups">
+  
+    <div class="containers">
+      <div class="box-top">
+          <img src="images/cunew9.jpg">
+      </div> 
+    <div class="box-bottom">
+        <h1>CULLINAN-IN DETAIL</h1>
+        <P>From urban adventures to journeys into the wilderness. Handle any environment with absolute authority in the most capable Rolls-Royce ever created.
+        </P>
+    </div>
+    </div>
+    <div class="containers">
+    <div class="box-top">
+        <img src="images/cunew11.webp" id="image">
+    </div> 
+    <div class="box-bottom">
+      <h1>CULLINAN: THE FINAL CHALLENGE</h1>
+      <P>As the first-ever Rolls-Royce SUV prepares for launch, only its final tests stand in its way. Watch Cullinan face its Final Challenge.
+      </P>
+    </div>
+    </div>
+    <div class="containers">
+    <div class="box-top">
+        <img src="images/cunew10.jpg" >
+    </div> 
+    <div class="box-bottom">
+      <h1>DISCOVER BESPOKE</h1>
+      <P>Choose from our exclisive collections or collaborate with our craftspeople and designers
+        to create a Rolls-Royce wholly unique to you. This is Rolls-Royce Bespoke.
+      </P>
+    </div>
+    </div>
+    
+    </div>
+</body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+</script>
+
+</html>

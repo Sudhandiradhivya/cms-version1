@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <!-- CSS File Link -->
+  <link rel="stylesheet" href="forms.css">
+  <!--Icons link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Login Form -->
+  <div class="form-container login">
+    <form class="form" id="form-login" autocomplete="off" onsubmit="return
+        validateLoginCredentials()">
+      <h3><a href="../home.html" class="fas fa-hamburger"></a> Log In</h3>
+      <div class="form-control">
+        <input type="text" id="login-email" placeholder="enter your email">
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <input type="password" id="login-password" placeholder="enter your password">
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <input type="submit" value="Log In">
+      <p><a href="#">forgot password?</a></p>
+      <p>New User? <a href="#" id="register-btn">Register Here</a></p>
+    </form>
+  </div>
+
+  <!-- Register Form -->
+  <div class="form-container register">
+    <div id="close-register-btn" class="fas fa-times"></div>
+
+    <form class="form" id="form-register" autocomplete="off" onsubmit="return
+        validateRegisterCredentials()">
+      <h3><a href="../home.html" class="fas fa-hamburger"></a> Register</h3>
+      <div class="form-control">
+        <input type="text" id="reg-username" placeholder="enter your name" />
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <input type="text" id="reg-email" placeholder="enter your email id" />
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <input type="tel" id="reg-phone" placeholder="enter your phone number" />
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <input type="password" id="reg-password" placeholder="enter password" />
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <input type="password" id="reg-password2" placeholder="re-enter password" />
+        <i class="fa fa-check"></i>
+        <i class="fa fa-times"></i>
+        <small>Error Message</small>
+      </div>
+      <input type="submit" value="Register">
+    </form>
+
+    <!-- JS File Link -->
+    <script src="toggle.js"></script>
+    <!-- Login validation  -->
+    <script src="login.js"></script>
+    <!-- Register validation -->
+    <script src="register.js"></script>
+</body>
+
+</html>
